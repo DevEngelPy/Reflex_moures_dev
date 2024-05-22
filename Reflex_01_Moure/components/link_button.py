@@ -1,15 +1,13 @@
 import reflex as rx
 
-def link_button(text:str, url:str) -> rx.Component:
+def link_button(text:str, url:str, tags:str) -> rx.Component:
     return rx.link(
                     rx.button(
                             rx.hstack(
                                         rx.icon(    
-                                                tag="calendar",
+                                                tag=tags,
                                             ),
-                                        rx.vstack(
-                                            rx.text("subtextto"),
-                                        ),
+                                        #rx.vstack(rx.text("subtextto"),),
                                         text, 
                                     ),
                             ),
